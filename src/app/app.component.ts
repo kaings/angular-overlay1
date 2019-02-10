@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isOpen: boolean = false;
+  selectedColor: string;
 
   colors = [
     {color: '#F44336', name: 'red'},
