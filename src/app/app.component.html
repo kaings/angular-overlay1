@@ -13,10 +13,12 @@
   [cdkConnectedOverlayOrigin]="trigger"
   [cdkConnectedOverlayOpen]="isOpen">
   <div class="border border-warning rounded p-1 ml-5 d-flex flex-wrap bg-warning"
-       style="max-width: 275px; box-shadow: 5px 5px 20px grey; top: 95px">
+       style="max-width: 275px; box-shadow: 5px 5px 20px grey; top: 95px"
+       cdkTrapFocus cdkTrapFocusAutoCapture>
     <div *ngFor="let color of colors">
       <div class="border rounded-circle p-4 m-2" [style.backgroundColor]="color.color" (click)="selectedColor = color.color">
       </div>
     </div>
   </div>
 </ng-template>
+<button>test</button>
