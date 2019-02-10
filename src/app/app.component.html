@@ -1,22 +1,24 @@
-<div class="p-5 position-relative">
-  <button
-    class="btn btn-outline-success"
-    cdkOverlayOrigin
-    #trigger="cdkOverlayOrigin"
-    (click)="isOpen = !isOpen">
-    Overlay Pop-up
-  </button>
+<button
+  type="button"
+  class="btn btn-outline-success"
+  cdkOverlayOrigin
+  #trigger="cdkOverlayOrigin"
+  (click)="isOpen = !isOpen">
+  Overlay Pop-up
+</button>
 
 
-  <ng-template
-    cdkConnectedOverlay
-    [cdkConnectedOverlayOrigin]="trigger"
-    [cdkConnectedOverlayOpen]="isOpen">
-    <div class="bg-success position-absolute shadow-lg rounded p-2 mb-5">
-      {{ 'this is an overlay!!!!!' }}
-
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen">
+  <div class="border border-warning rounded p-1 ml-5 d-flex flex-wrap bg-warning"
+       style="max-width: 275px; box-shadow: 5px 5px 20px grey; top: 95px">
+    <div *ngFor="let color of colors">
+      <div class="border rounded-circle p-4 m-2" [style.backgroundColor]="color.color">
+      </div>
     </div>
-  </ng-template>
+  </div>
+</ng-template>
 
-</div>
 
